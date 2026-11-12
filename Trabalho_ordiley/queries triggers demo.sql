@@ -14,7 +14,7 @@ INSERT INTO registro (id_veiculo, id_vaga, id_funcionario_entrada)
 VALUES (4, 7, 1);
 SELECT numero, status FROM vaga WHERE numero = 7;                 -- livre: trigger desligada
 
-ALTER TABLE registro ENABLE TRIGGER trg_registro_vaga;
+ALTER TABLE registro ENABLE TRIGGER trg_registro_vaga;        -- trigger ativada
 DELETE FROM registro WHERE id_vaga = 7 AND data_saida IS NULL;    -- limpa o teste
 SELECT numero, status FROM vaga WHERE numero = 7;                 -- livre
 
@@ -24,7 +24,7 @@ INSERT INTO manutencao_vaga (id_vaga, motivo, id_funcionario)
 VALUES (7, 'Teste com trigger desligada', 2);
 SELECT numero, status FROM vaga WHERE numero = 7;                 -- livre: trigger desligada
 
-ALTER TABLE manutencao_vaga ENABLE TRIGGER trg_manutencao_vaga;
+ALTER TABLE manutencao_vaga ENABLE TRIGGER trg_manutencao_vaga;   -- trigger ativada
 UPDATE manutencao_vaga SET data_fim = LOCALTIMESTAMP
 WHERE id_vaga = 7 AND data_fim IS NULL;                           -- limpa o teste
 SELECT numero, status FROM vaga WHERE numero = 7;                 -- livre

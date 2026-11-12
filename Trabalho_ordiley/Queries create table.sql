@@ -1,4 +1,4 @@
--- Active: 1791565324654@@127.0.0.1@5432@estaciona_ai@estaciona_ai
+-- Active: 1791565324654@@127.0.0.1@5432@estaciona_ai@estaciona
 -- Active: 1791565324654@@127.0.0.1@5432@trabalho_odirley@trabalho_odirley
 -- =====================================================================
 -- ESTACIONA AÍ - Criação das tabelas (PostgreSQL)
